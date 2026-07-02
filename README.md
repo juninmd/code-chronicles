@@ -1,19 +1,34 @@
 # Code Chronicles
 
-A CLI tool that traverses your local directory containing multiple git repositories, extracts the commit history from the past N days, and generates a unified Markdown report. Perfect for developers managing multiple microservices or side projects who want to see a combined view of their recent work.
+> CLI tool para gerar relatórios unificados de commits de múltiplos repositórios Git.
 
-## Setup
+![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue?logo=typescript)
+![Node](https://img.shields.io/badge/Node-%3E=18-339933?logo=nodedotjs)
+![License](https://img.shields.io/badge/License-ISC-blue)
 
-1. \`npm install\`
-2. \`npm run build\`
-3. \`npm link\` (optional, to use the CLI globally)
+## Sobre
 
-## Usage
+Ferramenta de linha de comando que percorre um diretório local contendo múltiplos repositórios Git, extrai o histórico de commits dos últimos N dias e gera um relatório unificado em Markdown. Perfeito para desenvolvedores que gerenciam múltiplos microserviços ou projetos paralelos.
 
-\`\`\`bash
+## Instalação
+
+```bash
+npm install
+npm run build
+npm link  # (opcional, para usar globalmente)
+```
+
+## Uso
+
+```bash
 code-chronicles generate -d D:\Solutions\pessoal -p 7
-\`\`\`
+```
 
-## Options
-- \`-d, --dir <directory>\`: The root directory containing your git repos. Defaults to the current directory.
-- \`-p, --period <days>\`: Number of days to look back. Defaults to 7.
+## Opções
+
+- `-d, --dir <diretório>`: Diretório raiz com os repositórios Git (padrão: diretório atual)
+- `-p, --period <dias>`: Número de dias para olhar para trás (padrão: 7)
+
+## Licença
+
+ISC
