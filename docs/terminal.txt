@@ -1,0 +1,42 @@
+$ node dist/index.js --help
+Usage: code-chronicles [options] [command]
+
+A CLI to generate a unified summary of your git commits across multiple local
+repositories.
+
+Options:
+  -V, --version       output the version number
+  -h, --help          display help for command
+
+Commands:
+  generate [options]  Generate a report of your recent commits
+  help [command]      display help for command
+
+$ node dist/index.js generate --help
+Usage: code-chronicles generate [options]
+
+Generate a report of your recent commits
+
+Options:
+  -d, --dir <directory>  Root directory containing your git repositories
+                         (default:
+                         "<diretorio-atual>")
+  -p, --period <days>    Number of days to look back (default: "7")
+  -h, --help             display help for command
+
+$ node dist/index.js generate -d <diretorio-com-repos> -p 7
+Scanning <diretorio-com-repos> for git repositories...
+Found 1 repositories. Extracting commits from the last 7 days...
+
+✅ Report generated successfully at: <diretorio-atual>/CODE_CHRONICLES_REPORT.md
+
+$ cat CODE_CHRONICLES_REPORT.md
+# Code Chronicles
+
+**Generated on:** <data>
+**Period:** Last 7 days
+
+## 📁 projeto-a
+
+- feat: exemplo (b15fee5) - 2026-10-23
+
