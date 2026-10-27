@@ -44,7 +44,8 @@ program
 
     const dateSince = new Date();
     dateSince.setDate(dateSince.getDate() - days);
-    const dateStr = dateSince.toISOString().split('T')[0];
+    const pad = (n: number) => String(n).padStart(2, '0');
+    const dateStr = `${dateSince.getFullYear()}-${pad(dateSince.getMonth() + 1)}-${pad(dateSince.getDate())}`;
 
     let report = `# Code Chronicles\n\n**Generated on:** ${new Date().toLocaleDateString()}\n**Period:** Last ${days} days\n\n`;
 
